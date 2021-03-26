@@ -1,0 +1,21 @@
+<mat-card class="product-card">
+    <mat-card-header>
+        <mat-card-title>
+            <h3>{{product.name}}</h3>
+        </mat-card-title>
+        <mat-card-subtitle *ngIf="product.category_id===1">Luthier: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===2">Luthier: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===3">Manufacturer: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===4">Author: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle>Price: ${{product.price}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="photo" mat-card-image src={{product.image}} alt="Product photo">
+    <mat-card-content>
+        <p>
+            {{product.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="selectForEditing(product.id)" [disabled]="_data.productForEditing">EDIT ITEM</button>
+    </mat-card-actions>
+</mat-card>

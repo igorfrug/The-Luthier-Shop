@@ -1,0 +1,80 @@
+.welcome{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 33vw;
+    height: 100vh;
+    background-image: url('https://th.bing.com/th/id/Rfc5d2b14fee6861e057dc8ac441b46eb?rik=t9CKf3J22DnXgQ&riu=http%3a%2f%2fwww.spookshop.com%2fv%2fvspfiles%2fphotos%2fRUB889149-2T.jpg&ehk=46Q1sOdOzf%2bAJeTFTKEzKz%2fY26v8Lghzi0Mm5n9gb20%3d&risl=&pid=ImgRaw');
+    background-repeat: no-repeat;
+    background-position-x:left ;
+    background-position-y: bottom;
+}
+.button{
+color: green;
+background-color:yellow ;
+}
+@media screen and (max-width: 680px){
+.welcome{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://th.bing.com/th/id/Rfc5d2b14fee6861e057dc8ac441b46eb?rik=t9CKf3J22DnXgQ&riu=http%3a%2f%2fwww.spookshop.com%2fv%2fvspfiles%2fphotos%2fRUB889149-2T.jpg&ehk=46Q1sOdOzf%2bAJeTFTKEzKz%2fY26v8Lghzi0Mm5n9gb20%3d&risl=&pid=ImgRaw');
+    background-repeat: no-repeat;
+    background-position-x:left ;
+    background-position-y: bottom;
+}
+.button{
+color: green;
+background-color:yellow ;
+    }
+}
+@media screen and (width: 1024px ){
+    .welcome{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        width: 33vw;
+        height: 100vh;
+        background-image: url('https://th.bing.com/th/id/Rfc5d2b14fee6861e057dc8ac441b46eb?rik=t9CKf3J22DnXgQ&riu=http%3a%2f%2fwww.spookshop.com%2fv%2fvspfiles%2fphotos%2fRUB889149-2T.jpg&ehk=46Q1sOdOzf%2bAJeTFTKEzKz%2fY26v8Lghzi0Mm5n9gb20%3d&risl=&pid=ImgRaw');
+        background-repeat: no-repeat;
+        background-position-x:center ;
+        background-position-y: center;
+        background-size: 350px;
+    }  
+    .button{
+        margin-bottom: 45%;
+       width: 250px;
+        color: green;
+        background-color:yellow ;
+            }
+}
+@media screen and (width: 768px ){
+    .welcome{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        width: 33vw;
+        height: 100vh;
+        background-image: url('https://th.bing.com/th/id/Rfc5d2b14fee6861e057dc8ac441b46eb?rik=t9CKf3J22DnXgQ&riu=http%3a%2f%2fwww.spookshop.com%2fv%2fvspfiles%2fphotos%2fRUB889149-2T.jpg&ehk=46Q1sOdOzf%2bAJeTFTKEzKz%2fY26v8Lghzi0Mm5n9gb20%3d&risl=&pid=ImgRaw');
+        background-repeat: no-repeat;
+        background-position-x:center ;
+        background-position-y: center;
+        background-size: 300px;
+    }  
+    .button{
+        margin-bottom: 45%;
+       width: 200px;
+        color: green;
+        background-color:yellow ;
+            }
+}

@@ -1,0 +1,29 @@
+STEPS:
+1. ng n proj-name
+2. ng generate(g) component(c) ||service(s) folder/name --skipTests 
+    - generate all the components and services
+3. router configuration in the app-routing.module.ts
+    - for empty url - pathMatch:"full" (eq. to exact in React.js)
+    - for every other url (404) - ** (eq. to Rote w/o 'path' prop in React.js)
+4. layout
+    - clear the demo in app.component.html
+    - place the rest of the components that doesn't depend on the router
+5. ng add @angilar/material - add angular material to your project
+5a. import the the built-in modules into the app.module.ts file
+    - for two way binding (template driven forms) - [(ngModel)] - FormsModule
+    - for reactive forms - ReactiveFormsModule
+    - for server comunications - HttpClientModule
+6. basic css
+7. build the models and interfaces
+---------------TODO---------------
+8. build the services
+9. build the components
+10. ensure to role based auth - router guards
+
+COMPONENTS:
+HEADER
+INTRO ->LOGIN,REGISTER1,REGISTER2,ABOUT,INFO
+CLIENTMAIN ->DISPLAY,ITEM,CART,SEARCHRESULTS
+ADMINMAIN ->ADMINDISPLAY,EDD/EDIT
+ORDER->FORM,RECIEPT
+THANKYOU

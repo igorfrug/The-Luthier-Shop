@@ -1,0 +1,7 @@
+.container {
+
+    width: 100vw;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  

@@ -1,0 +1,20 @@
+<div class="cart" *ngIf="this._data.newBasket">
+    <div class="headings">
+        <div class="head">
+            <h3>Your Cart is open.Enjoy your shopping!</h3>
+            <h5> This cart was open on: {{ _data.newBasket.date.slice(0,21) }}</h5>
+        </div>
+        <div class="empty">
+            <button class='empty-btn' *ngIf="_data.InCartProducts && _data.InCartProducts.length>0" color="warn" (click)="emptyBasket(_data.newBasket.id)" [disabled]="_data.InCartProducts==null || _data.InCartProducts.length==0">Empty Cart</button>
+        </div>
+    </div>
+    <div class="incart-display">
+        <div class="inCart-products" *ngIf="_data.InCartProducts ">
+            <app-in-cart-product *ngFor="let inCartProduct of _data.InCartProducts" [InCartProduct]="inCartProduct"> </app-in-cart-product>
+        </div>
+    </div>
+    <div class="total">
+        <h4>{{_data.totalPrice? 'TOTAL PRICE: $'+ _data.totalPrice:''}} </h4>
+        <button class="total-btn" mat-raised-button (click)="handleClick()" [disabled]=' !_data.InCartProducts || _data.InCartProducts.length===0'>ORDER</button>
+    </div>
+</div>

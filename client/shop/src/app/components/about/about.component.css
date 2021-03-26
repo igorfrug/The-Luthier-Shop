@@ -1,0 +1,58 @@
+.about{
+    width: 34vw;
+    height: 85vh;
+    margin-top: 15vh;
+   background-image: url('https://c1.staticflickr.com/1/113/366997712_74761515dd_z.jpg?zz=1');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+.perfection{
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+h2{
+    padding-left: 1%;
+    margin-top: 1vh;
+    font-family: parisienne;
+    font-size: 30px;
+}
+
+h3{
+    margin-top: -3%;
+    padding-left: 1%; 
+    font-family: libre; 
+}
+@media screen and (max-width: 680px){
+    .about{
+        width: 100vw;
+        height:100%;
+        margin-bottom: 70%;
+       background-image: url('https://c1.staticflickr.com/1/113/366997712_74761515dd_z.jpg?zz=1');
+       background-position: center;
+       background-repeat: no-repeat;
+       background-size: cover;
+    }
+    .perfection{
+        margin-top: 3vh;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    h2{
+        padding-left: 1%;
+        margin-top: 1vh;
+        font-family: parisienne;
+        font-size: 30px;
+    }
+    
+    h3{
+        
+        padding-left: 1%; 
+        font-family: libre; 
+    } 
+}

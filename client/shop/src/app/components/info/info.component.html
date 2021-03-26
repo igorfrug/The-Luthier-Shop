@@ -1,0 +1,13 @@
+<div class="info">
+    <h2>We sell instruments that play for you!</h2>
+    <p>Qwa-Qwa Saba, the shop founder</p>
+    <h3 class="products"> In our shop we have {{this._data.numOfProducts}} items, all related to string instruments. </h3>
+    <h3 class="orders">
+        {{this._data.numOfOrders}} orders were made in our shop since it was opened in March 2021.
+    </h3>
+    <h3 class='notification' *ngIf=" _data.openBasket && _data.user"> You have an open basket from {{_data.openBasket.date |date: 'dd-MM-yyyy'}}
+    </h3>
+    <h3 class='notification' *ngIf=" _data.LastClosedBasket && _data.user"> Your last purchase was on {{ _data.LastClosedBasket.date |date: 'dd-MM-yyyy' }}
+    </h3>
+    <h3 class='notification' *ngIf="_data.user && !_data.openBasket && !_data.LastClosedBasket"> Welcome, Maestro {{_data.user.surname}}! </h3>
+</div>

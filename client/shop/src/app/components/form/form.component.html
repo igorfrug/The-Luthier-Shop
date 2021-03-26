@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="form">
+        <form [formGroup]="myForm" class="form" (ngSubmit)="addProduct()">
+            <mat-form-field appearance="fill">
+                <mat-label>Category ID</mat-label>
+                <mat-select required formControlName="categoryID">
+                    <mat-option value="1">Instruments</mat-option>
+                    <mat-option value="2">Bows</mat-option>
+                    <mat-option value="3">Accessories</mat-option>
+                    <mat-option value="4">Sheet music for strings</mat-option>
+                </mat-select>
+                <mat-error *ngIf="myForm.controls.categoryID.errors?.required">All fields must be filled</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Product name</mat-label>
+                <input matInput formControlName="name">
+                <mat-error *ngIf="myForm.controls.name.errors?.required">All fields must be filled</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Author/Luthier/Manufacturer</mat-label>
+                <input matInput formControlName="author">
+                <mat-error *ngIf="myForm.controls.author.errors?.required">All fields must be filled</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Product price</mat-label>
+                <input matInput formControlName="price">
+                <mat-error *ngIf="myForm.controls.price.errors?.required">All fields must be filled</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Product image</mat-label>
+                <input matInput formControlName="image">
+                <mat-error *ngIf="myForm.controls.image.errors?.required">All fields must be filled</mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Product description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+                <mat-error *ngIf="myForm.controls.description.errors?.required">All fields must be filled</mat-error>
+            </mat-form-field>
+            <button mat-raised-button type="submit" [disabled]="myForm.invalid">ADD</button>
+        </form>
+        <h3><a href="/adminmain/admindisplay">Back to Admin main page</a></h3>
+    </div>
+</div>

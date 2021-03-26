@@ -1,0 +1,71 @@
+.order{
+    width: 100vw;
+    margin-top: 15vh;
+    height: 85vh;
+    display: flex;
+justify-content: stretch;
+}
+.reciept{
+    width: 50vw;
+    height: 85vh;
+   
+    background-color: rgb(235, 243, 245);
+}
+.order-form{ 
+    width: 50vw;
+    height: 85vh;
+    
+    background-color: rgb(202, 198, 198); 
+}
+@media screen and (max-width: 1120px){
+    .reciept{
+        width: 60vw;
+        height: 85vh;
+       
+        background-color: rgb(235, 243, 245);
+    }
+    .order-form{ 
+        width: 40vw;
+        height: 85vh;
+        
+        background-color: rgb(202, 198, 198); 
+    }
+
+}
+@media screen and (max-width: 925px){
+    .reciept{
+        width: 70vw;
+        height: 85vh;
+       
+        background-color: rgb(235, 243, 245);
+    }
+    .order-form{ 
+        width: 30vw;
+        height: 85vh;
+        
+        background-color: rgb(202, 198, 198); 
+    }
+
+}
+@media screen and (max-width: 750px){
+    .order{
+        width: 100vw;
+        margin-top: 15vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    justify-content: stretch;
+    }
+    .reciept{
+        width: 100vw;
+        height: 85vh;
+       
+        background-color: rgb(235, 243, 245);
+    }
+    .order-form{ 
+        width: 100vw;
+        height: 100%;
+        padding-bottom: 5%;
+        background-color: rgb(202, 198, 198); 
+    }
+}

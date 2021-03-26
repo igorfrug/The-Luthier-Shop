@@ -1,0 +1,54 @@
+.register1{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33vw;
+    height: 85vh;
+    margin-top: 15vh;
+    background-color: rgb(194, 189, 189); 
+}
+
+.register1-form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+button{
+    background-color: rgb(35, 245, 46);
+}
+.material-icons{
+    font-weight: 900;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 680px){
+    .register1{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100%;
+        
+        background-color: rgb(194, 189, 189); 
+    }
+    
+    .register1-form{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+    }
+    button{
+        background-color: rgb(35, 245, 46);
+    }
+    .material-icons{
+        font-weight: 900;
+        cursor: pointer;
+    } 
+    .material-icons{
+        z-index: 9;
+    } 
+}

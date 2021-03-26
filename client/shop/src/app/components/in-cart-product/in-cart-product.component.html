@@ -1,0 +1,17 @@
+<mat-card class="inCart-card">
+    <mat-card-header class="card-header">
+        <mat-card-title>
+            <h3>{{InCartProduct.name}}</h3>
+        </mat-card-title>
+        <mat-card-subtitle *ngIf="InCartProduct.category_id===1">Luthier: {{InCartProduct.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="InCartProduct.category_id===2">Luthier: {{InCartProduct.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="InCartProduct.category_id===3">Manufacturer: {{InCartProduct.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="InCartProduct.category_id===4">Author: {{InCartProduct.author}}</mat-card-subtitle>
+        <mat-card-subtitle>Total Price: ${{InCartProduct.total_price}}</mat-card-subtitle>
+        <mat-card-subtitle>Quantity: {{InCartProduct.quantity}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{InCartProduct.image}} alt="Photo of the product" class="photo">
+    <mat-card-actions>
+        <button class='remove' mat-button (click)="deleteProductFromBasket(InCartProduct.id,_data.newBasket.id)">REMOVE</button>
+    </mat-card-actions>
+</mat-card>

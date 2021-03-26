@@ -1,0 +1,22 @@
+<div class="display">
+    <div class="main-categories">
+        <div class="display">
+            <div class="categories">
+                <div class="headings">
+                    <h3 (click)="getAllProducts()">HOME</h3>
+                    <div class="border-home">||</div>
+                    <h3 (click)="getProductsByCategory(1)">INSTRUMENTS</h3>
+                    <div class="border">|</div>
+                    <h3 (click)="getProductsByCategory(2)">BOWS</h3>
+                    <div class="border">|</div>
+                    <h3 (click)="getProductsByCategory(3)">ACCESSORIES</h3>
+                    <div class="border">|</div>
+                    <h3 (click)="getProductsByCategory(4)">SHEET MUSIC FOR STRINGS</h3>
+                </div>
+            </div>
+            <div class="products">
+                <app-admin-item *ngFor="let product of _data.products" [product]="product"></app-admin-item>
+            </div>
+        </div>
+    </div>
+</div>

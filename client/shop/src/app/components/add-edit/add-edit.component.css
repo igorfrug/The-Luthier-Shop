@@ -1,0 +1,15 @@
+.addEditProduct{
+    height: 100%;
+    width:30vw;
+    background-color: rgb(151, 235, 54);
+    border-right:2px solid black;
+    overflow: auto;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.add{
+    margin-top: 20%;
+}

@@ -1,0 +1,58 @@
+.display{
+    height: 85vh;
+    width: 70vw;
+    background-color: rgb(148, 90, 90);
+    overflow: auto;
+}
+.categories{
+    height: 12vh;
+    width: 70%;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    background-color: rgb(104, 75, 75);
+}
+.headings{
+    margin-top: 2vh;
+    height: 12vh;
+    width: 50%;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;  
+}
+.border{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.5%;
+    width: 2%;
+}
+.border-home{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.7%;
+    width: 2%;
+}
+
+.products{
+    width: 100%;
+    height: 73vh;
+    margin-top: 12vh;
+    
+    background-color: #f7e9bb;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items:center;
+    z-index: 0;
+    overflow: auto;
+}
+   
+
+h3:hover{
+    cursor: pointer;
+    color:blue;
+}

@@ -1,0 +1,38 @@
+<div class="register2">
+    <form [formGroup]="myForm2" (ngSubmit)="handleSubmit()" class="register2-form">
+        <mat-form-field appearance="standard">
+            <mat-label>City</mat-label>
+            <select matNativeControl required formControlName='city'>
+                <option value="Tel-Aviv">Tel-Aviv</option>
+                <option value="New-York">New-York</option>
+                <option value="Paris">Paris</option>
+                <option value="London">London</option>
+                <option value="Moscow">Moscow</option>
+                <option value="Hong-Kong">Hong-Kong</option>
+                <option value="Tokio">Tokio</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Milano">Milano</option>
+                <option value="Madrid">Madrid</option>
+            </select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="standard">
+            <mat-label>Street</mat-label>
+            <input matInput placeholder="Street" formControlName="street">
+            <mat-hint>Enter your street</mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="standard">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="First name" formControlName="name">
+            <mat-hint>Your first name please</mat-hint>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="standard">
+            <mat-label>LastName</mat-label>
+            <input matInput placeholder="Your last name" formControlName="surname">
+            <mat-hint>Your last name please</mat-hint>
+        </mat-form-field>
+        <button mat-raised-button type="submit" [disabled]="myForm2.invalid">Sign In</button>
+    </form>
+</div>

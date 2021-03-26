@@ -1,0 +1,34 @@
+<mat-card class="product-card" (mouseleave)="hideToggle.close()" (mouseover)="hideToggle.open()">
+    <mat-card-header>
+        <mat-card-title>
+            <h3 class='title'>{{product.name}}</h3>
+        </mat-card-title>
+        <mat-card-subtitle *ngIf="product.category_id===1">Luthier: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===2">Luthier: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===3">Manufacturer: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===4">Author: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle>Price: ${{product.price}}</mat-card-subtitle>
+    </mat-card-header>
+    <img class="photo" mat-card-image src={{product.image}} alt="Product photo">
+    <mat-card-content>
+        <p>
+            {{product.description}}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <mat-accordion>
+            <mat-expansion-panel #hideToggle>
+                <mat-panel-title class="info-buy" *ngIf="product.price<1000" (click)="(_data.InCartIDs  && _data.InCartIDs.includes(product.id))? deleteProductFromBasket(product.id,this._data.newBasket.id): postProductToBasket(product.id,this._data.newBasket.id,1)">{{ (_data.InCartIDs  && _data.InCartIDs.includes(product.id))? 'REMOVE FROM CART':"ADD TO CART"}}</mat-panel-title>
+                <mat-panel-title class="info-buy1" *ngIf="product.price>1000">INFORMATION</mat-panel-title>
+                <h3 *ngIf="product.price<1000" class="math"> <i class="material-icons" (click)="removeQuantity(product.id,this._data.newBasket.id)">{{_data.InCartIDs && !_data.InCartIDs.includes(product.id) || _data.InCartIDs===null ? '':'remove_circle_outline'}}</i>
+                    {{_data.InCartIDs && _data.InCartIDs.includes(product.id) ? product.quantity:''}} <i class="material-icons" (click)="addQuantity(product.id,this._data.newBasket.id)">{{ _data.InCartIDs  && !_data.InCartIDs.includes(product.id)  || _data.InCartIDs===null? '':' add_circle_outline'}}</i>
+                </h3>
+                <h4 *ngIf="product.price<1000" class="total">{{_data.InCartIDs && _data.InCartIDs.includes(product.id)? 'Total price: $'+(product.total_price) :''}} </h4>
+                <p *ngIf="product.price>=1000">We ship only instruments,accesories and sheet music priced less then $1000 per item.For more information,please,contact us directly.</p>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true"
+                (closed)="panelOpenState = false">
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-actions>
+</mat-card>

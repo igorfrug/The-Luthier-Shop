@@ -1,0 +1,29 @@
+<form [formGroup]="myForm" (ngSubmit)="editProduct(_data.productForEditing.id)" class="showProductForEditing">
+    <mat-card class="product-card">
+        <mat-form-field class="example-full-width">
+            <mat-label>Product name</mat-label>
+            <input matInput formControlName='name'>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Author/Luthier/Manufacturer</mat-label>
+            <input matInput formControlName='author'>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Product price</mat-label>
+            <input matInput formControlName='price'>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <mat-label>Product Image</mat-label>
+            <input matInput formControlName='image'>
+        </mat-form-field>
+        <mat-card-content>
+            <mat-form-field class="example-full-width">
+                <mat-label>Product description</mat-label>
+                <textarea matInput formControlName='description'></textarea>
+            </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button type='submit'>EDIT</button>
+        </mat-card-actions>
+    </mat-card>
+</form>

@@ -1,0 +1,50 @@
+<div class="shipping-details">
+    <h1>Shipping details</h1>
+    <form class="form" [formGroup]="myForm" (ngSubmit)="saveBasket(_data.newBasket? _data.newBasket.id:_data.openBasket.id , _data.totalPrice)">
+        <mat-form-field appearance="standard">
+            <mat-label>City</mat-label>
+            <select matNativeControl required formControlName="city" (dblclick)="dbclickhandler($event)">
+                <option value="Tel-Aviv">Tel-Aviv</option>
+                <option value="New-York">New-York</option>
+                <option value="Paris">Paris</option>
+                <option value="London">London</option>
+                <option value="Moscow">Moscow</option>
+                <option value="Hong-Kong">Hong-Kong</option>
+                <option value="Tokio">Tokio</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Milano">Milano</option>
+                <option value="Madrid">Madrid</option>
+            </select>
+            <mat-hint>Select your city</mat-hint>
+            <mat-error *ngIf="myForm.controls.city.errors?.required">This field is obligatory</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="standard" class="street">
+            <mat-label>Street</mat-label>
+            <input matInput required placeholder="Street" formControlName="street" (dblclick)="dbclickhandler($event)">
+            <mat-hint>Enter your street</mat-hint>
+            <mat-error *ngIf="myForm.controls.street.errors?.required">This field is obligatory</mat-error>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width date" appearance="sandard">
+            <mat-label>Choose a delivery date</mat-label>
+            <input matInput [min]="minDate" [max]="maxDate" [matDatepickerFilter]="myFilter" [matDatepicker]="picker" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="myForm.controls.date.errors?.required">This field is obligatory</mat-error>
+        </mat-form-field>
+        <hr class='line'>
+        <h3>Payments</h3>
+        <mat-form-field appearance="standard" class='card'>
+            <mat-label>Credit Card </mat-label>
+            <input matInput formControlName='card'>
+            <mat-hint>4 last digits of your credit card number</mat-hint>
+            <!-- <div *ngIf="cardNumber.errors && isValidFormSubmitted != null && !isValidFormSubmitted" [ngClass]="'error'"> -->
+            <!-- <div *ngIf="cardNumber.errors.required"> Sorry,Maestro.You don't pay,we don't ship... </div> -->
+            <!-- <div *ngIf="cardNumber.errors.pattern"> Credit card number not valid. </div> -->
+            <mat-error *ngIf="myForm.controls.card.errors?.required">Sorry,Maestro.You don't pay,we don't ship...</mat-error>
+            <mat-error *ngIf="creditCardValidator">Credit card number not valid.</mat-error>
+        </mat-form-field>
+        <button class='order' mat-raised-button color="warn" type="submit" [disabled]="myForm.invalid">ORDER</button>
+    </form>
+</div>

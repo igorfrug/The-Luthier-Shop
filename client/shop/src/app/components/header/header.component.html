@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="left-side">
+        <div class="logo">
+            <img src="https://png.clipart.me/istock/previews/4094/40943188-frog-plays-the-violin.jpg" alt="frog the fiddler" class="tmuna">
+        </div>
+    </div>
+    <div class="center">
+        <h1>FROG THE FIDDLER</h1>
+        <div class="search" *ngIf="_data.products && _data.products.length>0">
+            <input #input type="text" class="input-search" placeholder="search here" name="searchInput">
+            <button class="button-search" (click)="getProductByName(input.value)"><span class="material-icons search-icon"> search </span></button>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="contacts-greeting">
+            <div class="contacts-log-out">
+                <div class="contacts">
+                    <p class="email">email: frogifiddles@frog.qwa</p>
+                    <p class='cart'>tel: +222-2222222 <span class="material-icons basket-icon" *ngIf='_data.openBasket || _data.newBasket' matBadgeSize="small" matBadge={{_data.numOfInCartItems}} matBadgeColor="warn"> shopping_cart </span></p>
+                </div>
+                <div class="logOut">
+                    <button mat-button class="logout" size="small" [ngStyle]="{'visibility':_data.user ? 'visible':'hidden' }" (click)='logOut()'><span class="out">LOG OUT</span></button>
+                </div>
+            </div>
+        </div>
+        <h4 class="greeting"> {{_data.user? 'Welcome, Maestro ' +_data.user.surname+'!':'Welcome Maestro!'}} </h4>
+    </div>
+</div>

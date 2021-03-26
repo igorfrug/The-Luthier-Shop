@@ -1,0 +1,70 @@
+<mat-drawer-container class="example-container" autosize *ngIf="_data.scrSize>750">
+    <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="true">
+        <div class="cart">
+            <app-cart></app-cart>
+        </div>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <div class="main-categories">
+            <div class="display">
+                <div class="categories">
+                    <div class="toggle">
+                        <button type="button" mat-raised-button (click)="drawer.toggle()">{{ drawer.opened   ? 'Hide':'Show'}} <i class="material-icons">shopping_cart</i></button>
+                    </div>
+                    <div class="headings">
+                        <h3 class="category" (click)="getAllProducts()">HOME</h3>
+                        <div class="border-home">||</div>
+                        <h3 class="category" (click)="getProductsByCategory(1)">INSTRUMENTS</h3>
+                        <div class="border">|</div>
+                        <h3 class="category" (click)="getProductsByCategory(2)">BOWS</h3>
+                        <div class="border">|</div>
+                        <h3 class="category" (click)="getProductsByCategory(3)">ACCESSORIES</h3>
+                        <div class="border">|</div>
+                        <h3 class="category" (click)="getProductsByCategory(4)">SHEET MUSIC </h3>
+                    </div>
+                </div>
+                <div class="products">
+                    <app-item *ngFor="let product of _data.products" [product]="product"></app-item>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-drawer-container>
+<mat-drawer-container class="example-container" autosize *ngIf="_data.scrSize<=750">
+    <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="false">
+        <div class="cart">
+            <app-cart></app-cart>
+        </div>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+        <div class="main-categories">
+            <div class="display">
+                <div class="categories">
+                    <div class="toggle">
+                        <button type="button" class="cart-button" mat-raised-button (click)="drawer.toggle()">{{ drawer.opened   ? 'Hide':'Show'}} <i class="material-icons cart-icon">shopping_cart</i></button>
+                    </div>
+                    <mat-accordion>
+                        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="hideToggle.toggle()">
+                            <mat-icon>menu</mat-icon>Categories
+                        </button>
+                        <mat-expansion-panel #hideToggle>
+                            <div class="headings">
+                                <h4 (click)="getAllProducts()" (click)="hideToggle.close()">HOME</h4>
+                                <h4 (click)="getProductsByCategory(1)" (click)="hideToggle.close()">INSTRUMENTS</h4>
+                                <h4 (click)="getProductsByCategory(2)" (click)="hideToggle.close()">BOWS</h4>
+                                <h4 (click)="getProductsByCategory(3)" (click)="hideToggle.close()">ACCESSORIES</h4>
+                                <h4 (click)="getProductsByCategory(4)" (click)="hideToggle.close()">SHEET MUSIC</h4>
+                            </div>
+                        </mat-expansion-panel>
+                        <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false">
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+                <div class="products">
+                    <app-item *ngFor="let product of _data.products" [product]="product"></app-item>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-drawer-container>

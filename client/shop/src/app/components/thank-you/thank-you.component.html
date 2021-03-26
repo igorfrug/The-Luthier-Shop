@@ -1,0 +1,11 @@
+<div class="thankyou">
+    <div class="messages">
+        <h1>Thank you for your purchase!</h1>
+        <h3>Your order was submitted sucsessfully</h3>
+        <h2><a
+                href="javascript:void(0)"
+                style="cursor:pointer"
+                (click)="downloadReceipt(this._data.user.id,this._data.orderDetails? this._data.orderDetails.basket_id:this._data.openBasket.id)"> Download Receipt </a></h2>
+    </div>
+    <button mat-flat-button (click)="handleClick()">For futher purchase</button>
+</div>
