@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# Luthier-shop
 
 ADMIN:
 email: qwa@qwa.com
