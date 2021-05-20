@@ -6,4 +6,25 @@
      overflow: hidden;
  
  }
- 
+ .main-categories{
+     width: 70vw;
+ }
+ .appEdit{
+     width: 30vw;
+ }
+ @media screen and (max-width: 750px){
+    .main-categories{
+        width: 60vw;
+    }
+    .appEdit{
+        width: 40vw;
+    }  
+ }
+ @media screen and (max-width: 650px){
+    .main-categories{
+        width: 55vw;
+    }
+    .appEdit{
+        width: 45vw;
+    }
+ }

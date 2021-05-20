@@ -3,8 +3,8 @@
         <mat-card-title>
             <h3 class='title'>{{product.name}}</h3>
         </mat-card-title>
-        <mat-card-subtitle *ngIf="product.category_id===1">Luthier: {{product.author}}</mat-card-subtitle>
-        <mat-card-subtitle *ngIf="product.category_id===2">Luthier: {{product.author}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="product.category_id===1 || product.category_id ===2">Luthier: {{product.author}}</mat-card-subtitle>
+        <!-- <mat-card-subtitle *ngIf="product.category_id===2">Luthier: {{product.author}}</mat-card-subtitle> -->
         <mat-card-subtitle *ngIf="product.category_id===3">Manufacturer: {{product.author}}</mat-card-subtitle>
         <mat-card-subtitle *ngIf="product.category_id===4">Author: {{product.author}}</mat-card-subtitle>
         <mat-card-subtitle>Price: ${{product.price}}</mat-card-subtitle>

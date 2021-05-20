@@ -1,6 +1,6 @@
 .addEditProduct{
     height: 100%;
-    width:30vw;
+    width:100%;
     background-color: rgb(151, 235, 54);
     border-right:2px solid black;
     overflow: auto;

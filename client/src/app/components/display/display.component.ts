@@ -32,6 +32,7 @@ export class DisplayComponent implements OnInit {
       this._server.getAllproducts().subscribe(
         (res: any) => {
           this._data.products = res.selectedProducts
+          console.log(this._data.products)
           setTimeout(() => {
             if (this._data.InCartProducts) {
               for (let icp of this._data.InCartProducts) {
@@ -59,6 +60,7 @@ export class DisplayComponent implements OnInit {
           this._server.getAllproducts().subscribe(
             (res: any) => {
               this._data.products = res.selectedProducts
+              console.log(this._data.products)
               setTimeout(() => {
                 if (this._data.InCartProducts) {
                   for (let icp of this._data.InCartProducts) {
@@ -99,6 +101,7 @@ export class DisplayComponent implements OnInit {
       this._server.getProductsByCategory(categoryID).subscribe(
         (res: any) => {
           this._data.products = res.products_by_category
+          console.log(this._data.products)
           this._r.navigateByUrl('/clientmain/display/displaybycategory')
           setTimeout(() => {
             if (this._data.InCartProducts) {

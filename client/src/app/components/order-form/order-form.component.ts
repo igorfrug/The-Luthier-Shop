@@ -30,17 +30,20 @@ export class OrderFormComponent implements OnInit {
   ) {
 
     const currentYear = new Date().getFullYear();
-
     this.minDate = new Date()
-    this.maxDate = new Date(currentYear, 2, 60)
+    this.maxDate = new Date(currentYear, 60)
+    console.log(this.minDate)
+    console.log(this.maxDate)
   }
 
   myFilter = (d: any = moment(new Date())): boolean => {
     const availableDates: Date[] = this.spArr
     if (availableDates) {
+      console.log(availableDates[3])
       let formattedAvailableDates = []
       for (let aDate of availableDates) {
         let newADate = new Date(aDate)
+        console.log(newADate)
         formattedAvailableDates.push(newADate)
       }
       return formattedAvailableDates.findIndex(aDate => d._d.toDateString() == aDate.toDateString()) < 0;
